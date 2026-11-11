@@ -1,0 +1,265 @@
+{
+ "engine_sha256": "81ef0040aa0aaf2d7dd98b42f4a7e2adcd417106f56a90678d1a8bbbbe849379",
+ "pins": {
+  "101:8:cond:false": {
+   "class": "proved",
+   "why": "Zero-skip is a pure optimisation: a zero coefficient adds 0*y to every output slot."
+  },
+  "102:12:del:Continue": {
+   "class": "proved",
+   "why": "Removing a zero-skip 'continue' only adds terms equal to 0."
+  },
+  "105:12:cond:false": {
+   "class": "proved",
+   "why": "Zero-skip is a pure optimisation: a zero coefficient adds x*0 to the output slot."
+  },
+  "106:16:del:Continue": {
+   "class": "proved",
+   "why": "Removing a zero-skip 'continue' only adds terms equal to 0."
+  },
+  "116:36:args:swap01": {
+   "class": "proved",
+   "why": "negacyclic integer product is commutative."
+  },
+  "126:15:const:+1": {
+   "class": "proved",
+   "why": "Every entry is overwritten by the loop below."
+  },
+  "126:15:const:-1": {
+   "class": "proved",
+   "why": "Every entry is overwritten by the loop below."
+  },
+  "173:22:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q and integer sums are commutative."
+  },
+  "173:43:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q and integer sums are commutative."
+  },
+  "178:19:bin:Sub": {
+   "class": "proved",
+   "why": "t = 2 so q = 2*delta and -delta == delta (mod q); centre() canonicalises."
+  },
+  "183:9:args:swap01": {
+   "class": "proved",
+   "why": "negacyclic integer product is commutative."
+  },
+  "184:8:args:swap01": {
+   "class": "proved",
+   "why": "t1 = a + b is symmetric; the product is commutative."
+  },
+  "185:8:args:swap01": {
+   "class": "proved",
+   "why": "t1 = a + b is symmetric; the product is commutative."
+  },
+  "187:9:args:swap01": {
+   "class": "proved",
+   "why": "negacyclic integer product is commutative."
+  },
+  "196:15:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "196:26:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "197:15:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "197:26:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "229:13:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "229:18:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "230:23:bin:Sub": {
+   "class": "proved",
+   "why": "bit is 0 or 1 and -delta == delta (mod q) because q = 2*delta; centre() canonicalises."
+  },
+  "231:13:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "231:18:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "235:11:bool:right": {
+   "class": "proved",
+   "why": "For negative value, value >> bits is -1 or less, hence truthy: the 'value < 0' test is redundant (and -1 vs 0 in its constant is the same predicate on integers)."
+  },
+  "235:19:const:-1": {
+   "class": "proved",
+   "why": "For negative value, value >> bits is -1 or less, hence truthy: the 'value < 0' test is redundant (and -1 vs 0 in its constant is the same predicate on integers)."
+  },
+  "254:12:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "254:43:args:swap01": {
+   "class": "proved",
+   "why": "Addition and ring product mod q are commutative."
+  },
+  "260:17:args:swap01": {
+   "class": "proved",
+   "why": "Ring product mod q is commutative."
+  },
+  "262:17:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q is commutative."
+  },
+  "264:17:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q is commutative."
+  },
+  "269:14:args:swap01": {
+   "class": "proved",
+   "why": "Ring product mod q is commutative."
+  },
+  "270:15:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q is commutative."
+  },
+  "278:16:const:-1": {
+   "class": "proved",
+   "why": "The first measured |e| >= 0 replaces -1 (e > -1), so the loop result is identical for N >= 1."
+  },
+  "281:16:bswap:swap": {
+   "class": "proved",
+   "why": "Operands swapped negates e; e is immediately replaced by |e|."
+  },
+  "282:22:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "282:26:const:+1": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "283:15:cmp:Gt>GtE": {
+   "class": "proved",
+   "why": "Equal values assign the same value."
+  },
+  "376:18:args:swap01": {
+   "class": "proved",
+   "why": "max is symmetric."
+  },
+  "380:18:args:swap01": {
+   "class": "proved",
+   "why": "max is symmetric."
+  },
+  "392:20:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "Operand is a constant bit in {0,1}; <= 0 and == 0 coincide."
+  },
+  "394:20:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "Operand is a constant bit in {0,1}; <= 0 and == 0 coincide."
+  },
+  "395:11:args:swap01": {
+   "class": "argued",
+   "why": "XOR over wires is commutative: ct_xor adds limbs mod q and sums nb; _W/BoundOps use symmetric max/sum."
+  },
+  "399:4:cond:false": {
+   "class": "proved",
+   "why": "Fallthrough branches return b/a/0 for constant 0/1 operands, which equals a^b / a&b on {0,1}."
+  },
+  "402:20:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "Operand is a constant bit in {0,1}; <= 0 and == 0 coincide."
+  },
+  "404:20:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "Operand is a constant bit in {0,1}; <= 0 and == 0 coincide."
+  },
+  "405:11:args:swap01": {
+   "class": "argued",
+   "why": "ct_and is symmetric up to the symmetric products t1 = x0*y1 + x1*y0; mul_bound is symmetric in (v1, v2)."
+  },
+  "430:10:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "When d == width the inner range(d, width) is empty, so the extra pass changes nothing."
+  },
+  "440:21:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "i is a non-negative loop index; <= 0 and == 0 coincide."
+  },
+  "462:7:cmp:Eq>GtE": {
+   "class": "proved",
+   "why": "After the while loop len(parts) <= 2."
+  },
+  "464:7:cmp:Eq>GtE": {
+   "class": "proved",
+   "why": "len(parts) <= 1 here; >= 1 and == 1 agree (the 0 case is excluded by both)."
+  },
+  "465:21:const:-1": {
+   "class": "proved",
+   "why": "len(parts) == 1 here, so index -1 equals index 0."
+  },
+  "472:10:cmp:NotEq>Gt": {
+   "class": "proved",
+   "why": "const is a non-negative literal; != 0 and > 0 coincide."
+  },
+  "487:10:cmp:Gt>NotEq": {
+   "class": "argued",
+   "why": "nodes is never empty (width >= 1), so != 1 and > 1 coincide; width 0 is never constructed (width = max(len)+6)."
+  },
+  "494:11:bswap:swap": {
+   "class": "argued",
+   "why": "2 % len is truthy for even len > 2 and appends a duplicate of the last node; the reduction lt = hi.lt ^ (hi.eq & lo.lt) is idempotent on a repeated top node (checked by hand and by exhaustive plain-wire tests for widths 1..8)."
+  },
+  "497:17:const:-1": {
+   "class": "proved",
+   "why": "len(nodes) == 1 here, so index -1 equals index 0."
+  },
+  "509:12:args:swap01": {
+   "class": "argued",
+   "why": "Bits above the value range are constants and fold to zero gates; +5 already suffices because 25*(2^b-1) < 2^(b+5), so width only has to be large enough and cost is unchanged (checked by exact gate-count goldens for 1..6 bits)."
+  },
+  "509:12:bin:Mult": {
+   "class": "argued",
+   "why": "Bits above the value range are constants and fold to zero gates; +5 already suffices because 25*(2^b-1) < 2^(b+5), so width only has to be large enough and cost is unchanged (checked by exact gate-count goldens for 1..6 bits)."
+  },
+  "509:38:const:+1": {
+   "class": "argued",
+   "why": "Bits above the value range are constants and fold to zero gates; +5 already suffices because 25*(2^b-1) < 2^(b+5), so width only has to be large enough and cost is unchanged (checked by exact gate-count goldens for 1..6 bits)."
+  },
+  "509:38:const:-1": {
+   "class": "argued",
+   "why": "Bits above the value range are constants and fold to zero gates; +5 already suffices because 25*(2^b-1) < 2^(b+5), so width only has to be large enough and cost is unchanged (checked by exact gate-count goldens for 1..6 bits)."
+  },
+  "50:14:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "The DRBG output is the fixed concatenation of sha256 blocks; refilling one block early does not change the byte stream."
+  },
+  "521:8:const:0": {
+   "class": "argued",
+   "why": "Search start only; the result is the least multiple of 32 that fits and every golden/grid case needs k >= 64, so starting at 0 visits 0 and 32 first and rejects them."
+  },
+  "529:11:cmp:Lt>LtE": {
+   "class": "argued",
+   "why": "Would differ only if the worst-case bound equals half_delta exactly; the golden grid asserts strict inequality at every probed k."
+  },
+  "64:26:const:-1": {
+   "class": "proved",
+   "why": "bytes(1) has length 1, so index -1 and index 0 coincide."
+  },
+  "81:37:const:+1": {
+   "class": "proved",
+   "why": "n*n + n is always even, so adding 3 instead of 2 gives the same floor."
+  },
+  "86:41:const:+1": {
+   "class": "proved",
+   "why": "The numerator term is even and q is even, so x % q == 1 never occurs; the ceiling cannot change."
+  }
+ }
+}
