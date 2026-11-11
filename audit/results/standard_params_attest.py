@@ -1,4 +1,4 @@
-"""Full encrypted solvency attestation (bfv_wad18.attest) at an HES-128-compatible ring size.
+he"""Full encrypted solvency attestation (bfv_wad18.attest) at an HES-128-compatible ring size.
 
 Defaults: N = 16384, relinearisation digit 64 bits, centred-binomial error eta = 21 (variance 10.5 >= 3.2^2),
 k = the engine's own choose_k(N, bits) for the comparator width (a 4-bit width gives k = 288 <= 438).
