@@ -1,0 +1,33 @@
+{
+ "and_gates": 120,
+ "attest_ok": true,
+ "bits": 4,
+ "bound_bits": [
+  252,
+  284
+ ],
+ "bound_dominates": true,
+ "brk_digest": "a1c18b52c293a54182f20418ab303dc571a5fd8ea18e11a0d678b2f84948394f",
+ "cap_digest": "511be383edd73779da33ac23c0d503e291fdab7e848d1b3e9ddebbe4eae9e54a",
+ "debt": 7,
+ "elapsed_s": 3874,
+ "eta": 21,
+ "ev": 14,
+ "expected": [
+  true,
+  true
+ ],
+ "got": [
+  true,
+  true
+ ],
+ "k": 288,
+ "limit_bits": 287,
+ "match": true,
+ "n": 16384,
+ "noise_bits": [
+  156,
+  172
+ ],
+ "wbits": 64
+}
