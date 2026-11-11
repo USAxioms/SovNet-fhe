@@ -1,0 +1,105 @@
+{
+ "engine_sha256": "20283fef1079473197f7a32c8c7cae7dab1fcdb14d2dc88191e004d59caf2767",
+ "pins": {
+  "123:8:args:swap01": {
+   "class": "proved",
+   "why": "max is symmetric."
+  },
+  "124:32:bin:Add": {
+   "class": "proved",
+   "why": "Only indices < n are read (range(n)); a longer zero pad is never indexed."
+  },
+  "125:32:bin:Add": {
+   "class": "proved",
+   "why": "Only indices < n are read (range(n)); a longer zero pad is never indexed."
+  },
+  "129:19:args:swap01": {
+   "class": "proved",
+   "why": "_padd is symmetric integer vector addition."
+  },
+  "144:11:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "150:37:args:swap01": {
+   "class": "proved",
+   "why": "polynomial product is commutative over the integers."
+  },
+  "151:21:args:swap01": {
+   "class": "proved",
+   "why": "polynomial product is commutative over the integers."
+  },
+  "162:16:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "190:23:bin:Add": {
+   "class": "argued",
+   "why": "Extra trailing zero limbs are inert: _pmul output is only consumed through low indices and limbs are reduced; no length-sensitive consumer, checked by reading the code."
+  },
+  "200:19:args:swap01": {
+   "class": "proved",
+   "why": "polynomial product is commutative over the integers."
+  },
+  "304:15:cmp:Eq>GtE": {
+   "class": "proved",
+   "why": "post() first rejects any side outside {D,C}; on that domain 'D'>='D' true and 'C'>='D' false, identical to ==."
+  },
+  "319:20:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "341:16:cond:false": {
+   "class": "proved",
+   "why": "Dead: over_cap implies ltv_status admitted 20*bound(new debt) < HALF, so bound(new)+bound(old) < HALF/10 and he_sub cannot fail here."
+  },
+  "342:20:ret:None": {
+   "class": "proved",
+   "why": "Dead branch (see 'if not rel.ok' pin)."
+  },
+  "342:27:args:swap01": {
+   "class": "proved",
+   "why": "Dead branch (see 'if not rel.ok' pin)."
+  },
+  "403:23:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "replay lines already passed post(); sides are in {D,C}; 'D'<='C' false and 'C'<='C' true, identical to ==."
+  },
+  "410:28:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "427:15:bool:left": {
+   "class": "proved",
+   "why": "Reached only after replay parity and balance equality: total = sum of posting deltas, each decrypting to 0 mod the modulus, so is_zero(tot) holds whenever tot.ok."
+  },
+  "48:17:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical. (<=0 and the constant 0->1 both only alter the v==0 case)"
+  },
+  "48:21:const:+1": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical. (<=0 and the constant 0->1 both only alter the v==0 case)"
+  },
+  "49:14:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "49:18:const:+1": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "58:8:args:swap01": {
+   "class": "proved",
+   "why": "max is symmetric."
+  },
+  "72:21:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "abs(0) == -0 == 0, so a term with x == 0 contributes 0 either way."
+  },
+  "72:25:const:+1": {
+   "class": "proved",
+   "why": "abs(0) == -0 == 0, so a term with x == 0 contributes 0 either way."
+  }
+ }
+}

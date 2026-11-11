@@ -1,0 +1,17 @@
+{
+ "engine_sha256": "f5fbc8d1703279e55c9d0a48f3a6687a80261f71d925605bd7db3457e2f4d2aa",
+ "pins": {
+  "65:15:args:swap01": {
+   "class": "proved",
+   "why": "qadd and qmul are commutative modulo q."
+  },
+  "65:22:args:swap01": {
+   "class": "proved",
+   "why": "qadd and qmul are commutative modulo q."
+  },
+  "77:13:args:swap01": {
+   "class": "proved",
+   "why": "qadd is commutative modulo q."
+  }
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "engine_sha256": "978046409301943d18dc29ba5bf91d16ced702da72e8816d960b5c37c99a35b7",
+ "pins": {
+  "150:18:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q and integer sums are commutative."
+  },
+  "150:37:args:swap01": {
+   "class": "proved",
+   "why": "Addition mod q and integer sums are commutative."
+  },
+  "161:11:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "166:14:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "166:18:const:+1": {
+   "class": "proved",
+   "why": "s < 1 is s <= 0; only s == 0 differs and there -0 == 0."
+  },
+  "176:16:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "202:12:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product and addition mod q are commutative."
+  },
+  "202:24:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product and addition mod q are commutative."
+  },
+  "216:13:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product and addition mod q are commutative."
+  },
+  "216:19:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product and addition mod q are commutative."
+  },
+  "218:13:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product and addition mod q are commutative."
+  },
+  "218:19:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product and addition mod q are commutative."
+  },
+  "222:14:args:swap01": {
+   "class": "proved",
+   "why": "Polynomial product is commutative."
+  },
+  "231:16:const:-1": {
+   "class": "proved",
+   "why": "The first measured |e| >= 0 replaces -1 (e > -1), so the loop result is identical for N >= 1."
+  },
+  "234:16:bswap:swap": {
+   "class": "proved",
+   "why": "Operands swapped negates e; e is immediately replaced by |e|."
+  },
+  "235:22:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "235:26:const:+1": {
+   "class": "proved",
+   "why": "v == 0 is the only value whose branch changes; there sign*0 == 0 and -0 == 0, so output is identical."
+  },
+  "236:15:cmp:Gt>GtE": {
+   "class": "proved",
+   "why": "Equal values assign the same value."
+  },
+  "332:15:cmp:Eq>GtE": {
+   "class": "proved",
+   "why": "post() first rejects any side outside {D,C}; on that domain 'D'>='D' true and 'C'>='D' false, identical to ==."
+  },
+  "347:20:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "369:16:cond:false": {
+   "class": "argued",
+   "why": "Dead: over_cap implies ltv_status admitted 20*bound(new debt) < HALF, so bound(new)+bound(old) < HALF/10 and he_sub cannot fail here."
+  },
+  "370:20:ret:None": {
+   "class": "argued",
+   "why": "Dead branch (see 'if not rel.ok' pin)."
+  },
+  "370:27:args:swap01": {
+   "class": "argued",
+   "why": "Dead branch (see 'if not rel.ok' pin)."
+  },
+  "431:23:cmp:Eq>LtE": {
+   "class": "proved",
+   "why": "replay lines already passed post(); sides are in {D,C}; 'D'<='C' false and 'C'<='C' true, identical to ==."
+  },
+  "438:28:args:swap01": {
+   "class": "argued",
+   "why": "he_add is commutative on limbs (mod add), terms (symmetric merge, dict equality ignores order) and bound (sum); the failure path depends only on the bound sum."
+  },
+  "455:15:bool:left": {
+   "class": "argued",
+   "why": "Reached only after replay parity and balance equality: total = sum of posting deltas, each decrypting to 0 mod the modulus, so is_zero(tot) holds whenever tot.ok."
+  },
+  "60:14:cmp:Lt>LtE": {
+   "class": "proved",
+   "why": "The DRBG output is the fixed concatenation of sha256 blocks; refilling one block early does not change the byte stream."
+  },
+  "73:26:const:-1": {
+   "class": "proved",
+   "why": "bytes(1) has length 1, so index -1 and index 0 coincide."
+  },
+  "82:8:cond:false": {
+   "class": "proved",
+   "why": "Zero-skip is a pure optimisation: a zero coefficient adds 0*y to every output slot."
+  },
+  "83:12:del:Continue": {
+   "class": "proved",
+   "why": "Removing a zero-skip 'continue' only adds terms equal to 0."
+  },
+  "86:12:cond:false": {
+   "class": "proved",
+   "why": "Zero-skip is a pure optimisation: a zero coefficient adds x*0 to the output slot."
+  },
+  "87:16:del:Continue": {
+   "class": "proved",
+   "why": "Removing a zero-skip 'continue' only adds terms equal to 0."
+  }
+ }
+}
