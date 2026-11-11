@@ -1,0 +1,59 @@
+# ==============================================================================
+# SPECIFICATION: WAD-18 Sovereign Node & Execution Daemon Spec (WAD18-NS-v2.0)
+# ==============================================================================
+# ARCHITECTURE: Zero-Drift, Axiomatic Ontological Intelligence Infrastructure
+# PRECISION: 18-Decimal Fixed-Point Integer Scaling (WAD = 10^18)
+# CRYPTOGRAPHY: BFV / Ring-Learning With Errors (RLWE) + Distributed Key Generation (DKG)
+# ==============================================================================
+
+node_metadata:
+  spec_version: "2.0.0-RELEASE"
+  execution_standard: "Russell Unified Axiomatic Stack (RUAX)"
+  arithmetic_model: "WAD-18 Fixed-Point Integer Precision"
+  cryptographic_layer: "BFV-RLWE Lattice with Multi-Party Threshold Decryption"
+  floating_point_compliance: "STRICT_PROHIBITION_IEEE_754"
+
+network_topology:
+  topology_type: "Multi-Topology Hierarchical Sovereign Mesh"
+  consensus_layer: "Cognitive State Ledger (CSL) on-chain anchoring"
+  routing_protocol: "Topology-Agnostic Encrypted Ciphertext Transport"
+  decentralization_model: "Trustless Threshold Quorum with Smudging Noise"
+
+core_parameters:
+  wad_scale: "1000000000000000000" # 1e18
+  half_wad: "500000000000000000"   # 0.5e18
+  polynomial_degree_n: 4096
+  ciphertext_modulus_bits: 60
+  smudging_noise_bound: "2^64"
+  dkg_threshold: "t-of-n verifiable secret sharing"
+
+daemon_services:
+  - service_id: "wad18_arithmetic_engine"
+    role: "Enforces 10^18 fixed-point integer scaling across all computational loops."
+    state: "ACTIVE"
+    dependencies: []
+
+  - service_id: "bfv_rlwe_crypto_layer"
+    role: "Provides lattice-based homomorphic encryption and un-reverse-engineerable state shielding."
+    state: "ACTIVE"
+    dependencies: ["wad18_arithmetic_engine"]
+
+  - service_id: "threshold_dkg_mpc"
+    role: "Manages decentralized key generation, partial decryptions, and calibrated smudging noise."
+    state: "ACTIVE"
+    dependencies: ["bfv_rlwe_crypto_layer"]
+
+  - service_id: "csl_ledger_anchor"
+    role: "Submits immutable state transition proofs and normative accountability logs to the smart contract layer."
+    state: "ACTIVE"
+    dependencies: ["wad18_arithmetic_engine"]
+
+verification_invariants:
+  - invariant_id: "INV-01-ZERO-DRIFT"
+    description: "All mathematical operations must resolve through exact integer arithmetic without floating-point rounding divergence."
+  
+  - invariant_id: "INV-02-LATTICE-SECURITY"
+    description: "All internal states must remain under BFV/RLWE ciphertext protection, ensuring zero reverse-engineering capability."
+
+  - invariant_id: "INV-03-THRESHOLD-SOVEREIGNTY"
+    description: "No single node or network topology may possess sufficient key material to decrypt state payloads independently."
